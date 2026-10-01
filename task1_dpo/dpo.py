@@ -19,11 +19,11 @@ def dpo_loss(
     ref_margin = ref_chosen_logp - ref_rejected_logp
 
     # Starter implementation: students must validate the objective carefully.
-    logits = beta * (policy_margin + ref_margin)
+    logits = beta * (policy_margin - ref_margin)
 
     loss = -F.logsigmoid(logits).mean()
     return loss, {
         "logit_mean": logits.detach().mean(),
         "policy_margin_mean": policy_margin.detach().mean(),
-        "preference_accuracy": (policy_margin > 0).float().mean().detach(),
+        "preference_accuracy": ((policy_margin - ref_margin) > 0).float().mean().detach(),
     }

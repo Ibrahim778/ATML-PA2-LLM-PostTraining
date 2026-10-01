@@ -81,6 +81,8 @@ def load_policy(cfg: dict, adapter_path: str | None = None, trainable: bool = Fa
 
     if torch.cuda.is_available():
         model = model.cuda()
+    elif torch.mps.is_available():
+        model = model.to("mps")
 
     if trainable:
         model.train()
@@ -136,8 +138,11 @@ def load_reward_model(cfg: dict):
         kwargs["dtype"] = dtype
 
     model = AutoModelForSequenceClassification.from_pretrained(cfg["reward_model"], **kwargs)
-    if qcfg is None and torch.cuda.is_available():
-        model = model.cuda()
+    if qcfg is None:
+        if torch.cuda.is_available():
+            model = model.cuda()
+        elif torch.mps.is_available():
+            model = model.to('mps')
 
     # The RM repository tokenizer was incompatible with the pinned Transformers build during
     # instructor preparation. Use the canonical base-policy tokenizer intentionally.
@@ -174,6 +179,8 @@ def load_value_model(cfg: dict, checkpoint: str, train_mode: str = "lora_head"):
             p.requires_grad_(False)
         if torch.cuda.is_available():
             model = model.cuda()
+        elif torch.mps.is_available():
+            model = model.to('mps')
         model.eval()
         return model
     elif train_mode == "full":
@@ -183,6 +190,8 @@ def load_value_model(cfg: dict, checkpoint: str, train_mode: str = "lora_head"):
 
     if torch.cuda.is_available():
         model = model.cuda()
+    elif torch.mps.is_available():
+        model = model.to('mps')
     model.train()
     return model
 
