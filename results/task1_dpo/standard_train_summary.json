@@ -1,0 +1,27 @@
+{
+  "run": "standard",
+  "config_path": "configs/dpo.yaml",
+  "dataset_path": "data/dpo_standard_train.jsonl",
+  "num_examples": 1500,
+  "max_examples": null,
+  "beta": 0.1,
+  "seed": 6304,
+  "learning_rate": 2e-05,
+  "batch_size": 2,
+  "grad_accum_steps": 8,
+  "epochs": 1,
+  "optimizer_updates": 94,
+  "lora": {
+    "r": 8,
+    "alpha": 16,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "v_proj"
+    ]
+  },
+  "wall_clock_s": 329.36431502364576,
+  "peak_vram_gb": 6.65809965133667,
+  "adapter_path": "/home/ATML-PA2-LLM-PostTraining/outputs/task1_dpo/standard",
+  "train_log": "/home/ATML-PA2-LLM-PostTraining/results/task1_dpo/standard_train_log.jsonl"
+}
