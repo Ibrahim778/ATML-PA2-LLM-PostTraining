@@ -9,6 +9,7 @@ common protocol. Only beta changes between forks.
 from __future__ import annotations
 
 import argparse
+from pathlib import Path
 
 from common.data import load_yaml, repo_path
 from common.logging_utils import save_json
@@ -29,7 +30,7 @@ def main():
     rows = []
     for beta in cfg["betas"]:
         name = f"beta_{beta:g}"
-        adapter = f"outputs/task1_dpo/{name}"
+        adapter = str(Path(cfg["standard_output"]).parent / name)
         train = run_training(args.config, run_name=name, output_path=adapter, beta=float(beta), max_examples=n)
         clear_gpu()  # free the training model before loading for evaluation
         res = evaluate_run(args.config, adapter, name)
