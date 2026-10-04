@@ -1,0 +1,17 @@
+{
+  "run": "clip_0.5",
+  "config_path": "configs/ppo.yaml",
+  "updates": 8,
+  "prompts_per_update": 1,
+  "ppo_epochs": 2,
+  "clip_epsilon": 0.5,
+  "kl_beta": 0.1,
+  "policy_learning_rate": 3e-06,
+  "seed": 6304,
+  "generated_tokens_total": 2175,
+  "wall_clock_s": 27.207502337172627,
+  "peak_vram_gb": 6.670546531677246,
+  "adapter_path": "/home/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/clip_0.5",
+  "value_path": "/home/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/clip_0.5_value",
+  "train_log": "/home/ATML-PA2-LLM-PostTraining/results/task2_ppo/clip_0.5_train_log.jsonl"
+}

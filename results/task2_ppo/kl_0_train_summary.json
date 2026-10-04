@@ -1,0 +1,17 @@
+{
+  "run": "kl_0",
+  "config_path": "configs/ppo.yaml",
+  "updates": 8,
+  "prompts_per_update": 1,
+  "ppo_epochs": 2,
+  "clip_epsilon": 0.2,
+  "kl_beta": 0.0,
+  "policy_learning_rate": 3e-06,
+  "seed": 6304,
+  "generated_tokens_total": 2639,
+  "wall_clock_s": 31.018427945673466,
+  "peak_vram_gb": 6.716821193695068,
+  "adapter_path": "/home/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/kl_0",
+  "value_path": "/home/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/kl_0_value",
+  "train_log": "/home/ATML-PA2-LLM-PostTraining/results/task2_ppo/kl_0_train_log.jsonl"
+}
