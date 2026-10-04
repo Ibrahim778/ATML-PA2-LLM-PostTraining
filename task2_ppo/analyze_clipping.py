@@ -29,7 +29,7 @@ from common.logging_utils import save_json, set_seed
 from common.metrics import masked_mean
 from common.models import clear_gpu, load_policy, load_reward_model, load_tokenizer, load_value_model, trainable_parameters
 from task2_ppo.ablate_kl import ensure_midpoint_eval, run_fork
-from task2_ppo.continue_train import disable_dropout, response_values
+from task2_ppo.continue_train import disable_dropout, response_values, upcast_trainable
 from task2_ppo.ppo import compute_gae, normalize_advantages, ppo_policy_loss, shaped_rewards
 
 MICRO_BATCH = 4  # sequences per forward pass (memory); losses are token-weighted so results don't depend on it
@@ -214,6 +214,7 @@ def cached_batch_study(config_path, cfg, eps_values):
         set_seed(int(cfg["seed"]))
         policy = load_policy(cfg, adapter_path=cfg["paths"]["ppo_midpoint_policy"], trainable=True)
         disable_dropout(policy)
+        upcast_trainable(policy)
         opt = AdamW(trainable_parameters(policy), lr=float(cfg["policy_learning_rate"]))
         per_epoch = []
         for ep in tqdm(range(1, int(cfg["ppo_epochs"]) + 1), desc=f"cached[eps={eps}]", dynamic_ncols=True):

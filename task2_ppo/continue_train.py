@@ -30,7 +30,6 @@ from common.models import (
     load_tokenizer,
     load_value_model,
     reference_mode,
-    token_values,
     trainable_parameters,
     value_parameter_groups,
 )
@@ -55,6 +54,10 @@ def prepare_ppo_continuation(config_path: str):
     )
     reward_model, reward_tokenizer = load_reward_model(cfg)
     prompts = read_jsonl(cfg["paths"]["rl_prompt_train"])
+    # fp16 trainable weights + AdamW (eps=1e-8 rounds to 0 in fp16) -> NaN updates. Keep frozen backbones in fp16,
+    # train adapters/heads in fp32.
+    upcast_trainable(policy)
+    upcast_trainable(value_model)
 
     policy_optimizer = AdamW(
         trainable_parameters(policy),
@@ -112,9 +115,26 @@ def masked_entropy_from_logits(logits, mask):
     return masked_mean(ent, mask)
 
 
+def upcast_trainable(model):
+    for p in model.parameters():
+        if p.requires_grad and p.dtype != torch.float32:
+            p.data = p.data.float()
+
+
 def response_values(value_model, sequences, attention_mask, prompt_width, n_steps):
-    """V(s_t) for each response step t: the value read at the position just before token t."""
-    v = token_values(value_model, sequences, attention_mask)
+    """V(s_t) for each response step t: the value read at the position just before token t.
+
+    Same computation as common.models.token_values, but casts the (fp16) hidden state to the head's dtype so an
+    fp32 trainable head works with the fp16 backbone.
+    """
+    base = value_model.get_base_model() if hasattr(value_model, "get_base_model") else value_model
+    backbone = getattr(base, base.base_model_prefix)
+    head = base.score if hasattr(base, "score") else base.classifier
+    hidden = backbone(input_ids=sequences, attention_mask=attention_mask, use_cache=False,
+                      return_dict=True).last_hidden_state
+    trainable = [p for p in head.parameters() if p.requires_grad]
+    dtype = (trainable or list(head.parameters()))[0].dtype
+    v = head(hidden.to(dtype)).squeeze(-1)
     return v[:, prompt_width - 1: prompt_width - 1 + n_steps].float()
 
 
@@ -174,18 +194,25 @@ def ppo_update(bundle, ro, advantages, returns, cfg, eps):
         bundle["policy_optimizer"].zero_grad(set_to_none=True)
         p_loss.backward()
         p_gn = torch.nn.utils.clip_grad_norm_(trainable_parameters(policy), max_norm)
-        bundle["policy_optimizer"].step()
+        p_ok = bool(torch.isfinite(p_loss)) and bool(torch.isfinite(p_gn))
+        if p_ok:  # never let a non-finite step into the weights
+            bundle["policy_optimizer"].step()
+        bundle["policy_optimizer"].zero_grad(set_to_none=True)
 
         new_v = response_values(value_model, ro["sequences"], ro["attention_mask"], ro["prompt_width"], mask.shape[1])
         v_loss = value_mse_loss(new_v, returns, mask)
         bundle["value_optimizer"].zero_grad(set_to_none=True)
         (float(cfg["value_coef"]) * v_loss).backward()
         v_gn = torch.nn.utils.clip_grad_norm_(trainable_parameters(value_model), max_norm)
-        bundle["value_optimizer"].step()
+        v_ok = bool(torch.isfinite(v_loss)) and bool(torch.isfinite(v_gn))
+        if v_ok:
+            bundle["value_optimizer"].step()
+        bundle["value_optimizer"].zero_grad(set_to_none=True)
 
         log_r = torch.log(ratio.clamp_min(1e-12))
         out.append({
-            "policy_loss": float(p_loss), "value_loss": float(v_loss),
+            "policy_loss": float(p_loss.detach()), "value_loss": float(v_loss.detach()),
+            "policy_step_skipped": not p_ok, "value_step_skipped": not v_ok,
             "clip_fraction": float(clip_frac),
             "approx_kl_old_new": float(masked_mean((ratio - 1) - log_r, mask)),   # k3 estimator
             "ratio_mean": float(masked_mean(ratio, mask)),
