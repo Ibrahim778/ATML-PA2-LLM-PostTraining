@@ -140,6 +140,10 @@ def collect_rollout(bundle, prompts, cfg):
         gen = batch_generate(policy, tok, prompts, max_prompt_length=int(cfg["max_prompt_length"]),
                              max_new_tokens=int(cfg["max_response_length"]), temperature=float(g["temperature"]),
                              top_p=float(g["top_p"]), do_sample=bool(g["do_sample"]))
+    # batch_generate runs under torch.inference_mode(); its tensors can't be used in autograd (the PPO update
+    # backprops through the policy forward on these token ids). Cloning outside inference mode gives normal tensors.
+    for k in ("sequences", "attention_mask", "response_ids", "response_mask"):
+        gen[k] = gen[k].clone()
     args = (gen["sequences"], gen["attention_mask"], gen["prompt_width"], gen["response_ids"])
     mask = gen["response_mask"]
     old_logp, logits = response_token_logprobs(policy, *args)
