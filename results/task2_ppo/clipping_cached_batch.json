@@ -12,102 +12,102 @@
       "before_each_epoch": [
         {
           "epoch": 1,
-          "clipped_objective_loss": -0.0721486915861932,
-          "grad_norm": 0.056774746626615524,
-          "clip_fraction": 0.5465168952941895,
-          "affected_token_fraction": 0.26877695322036743,
-          "unclipped_surrogate": -0.008417248725891113,
-          "ratio_mean": 0.9191285967826843,
-          "ratio_min": 1.0148652751507115e-10,
-          "ratio_max": 29.802671432495117
+          "clipped_objective_loss": -0.07226124425429876,
+          "grad_norm": 0.05546734482049942,
+          "clip_fraction": 0.5466303825378418,
+          "affected_token_fraction": 0.2691173255443573,
+          "unclipped_surrogate": -0.008209764957427979,
+          "ratio_mean": 0.919123113155365,
+          "ratio_min": 1.027404133990828e-10,
+          "ratio_max": 29.81205940246582
         },
         {
           "epoch": 2,
-          "clipped_objective_loss": -0.07218066293434315,
-          "grad_norm": 0.05473526194691658,
-          "clip_fraction": 0.5466303825378418,
-          "affected_token_fraction": 0.26923078298568726,
-          "unclipped_surrogate": -0.008410310372710228,
-          "ratio_mean": 0.9190884232521057,
-          "ratio_min": 1.0161960162236028e-10,
-          "ratio_max": 29.86174774169922
+          "clipped_objective_loss": -0.07230438621613698,
+          "grad_norm": 0.05389922112226486,
+          "clip_fraction": 0.5473110675811768,
+          "affected_token_fraction": 0.2688904106616974,
+          "unclipped_surrogate": -0.008182279765605927,
+          "ratio_mean": 0.9191961288452148,
+          "ratio_min": 1.0275236911327923e-10,
+          "ratio_max": 29.870996475219727
         }
       ],
       "after_last_step": {
-        "clip_fraction": 0.5475379824638367,
-        "affected_token_fraction": 0.26923078298568726,
-        "unclipped_surrogate": -0.008402994833886623,
-        "ratio_mean": 0.9191626906394958,
-        "ratio_min": 1.0100664749046473e-10,
-        "ratio_max": 29.81264877319336
+        "clip_fraction": 0.5473110675811768,
+        "affected_token_fraction": 0.2688904106616974,
+        "unclipped_surrogate": -0.008190766908228397,
+        "ratio_mean": 0.9190961122512817,
+        "ratio_min": 1.0198639155412081e-10,
+        "ratio_max": 29.81206512451172
       }
     },
     "0.2": {
       "before_each_epoch": [
         {
           "epoch": 1,
-          "clipped_objective_loss": -0.04780845918049365,
-          "grad_norm": 0.06744765490293503,
-          "clip_fraction": 0.3286816477775574,
-          "affected_token_fraction": 0.16099387407302856,
-          "unclipped_surrogate": -0.008417248725891113,
-          "ratio_mean": 0.9191285967826843,
-          "ratio_min": 1.0148652751507115e-10,
-          "ratio_max": 29.802671432495117
+          "clipped_objective_loss": -0.04792391266597461,
+          "grad_norm": 0.05832028388977051,
+          "clip_fraction": 0.3289085626602173,
+          "affected_token_fraction": 0.1616746038198471,
+          "unclipped_surrogate": -0.008209764957427979,
+          "ratio_mean": 0.919123113155365,
+          "ratio_min": 1.027404133990828e-10,
+          "ratio_max": 29.81205940246582
         },
         {
           "epoch": 2,
-          "clipped_objective_loss": -0.047875052860403146,
-          "grad_norm": 0.06361892819404602,
-          "clip_fraction": 0.3286816477775574,
-          "affected_token_fraction": 0.16190151870250702,
-          "unclipped_surrogate": -0.00840336550027132,
-          "ratio_mean": 0.919170618057251,
-          "ratio_min": 1.0022863095038304e-10,
-          "ratio_max": 29.870975494384766
+          "clipped_objective_loss": -0.04797989087370185,
+          "grad_norm": 0.06555663794279099,
+          "clip_fraction": 0.32902202010154724,
+          "affected_token_fraction": 0.16122078895568848,
+          "unclipped_surrogate": -0.008208286948502064,
+          "ratio_mean": 0.919207751750946,
+          "ratio_min": 1.0236349268222256e-10,
+          "ratio_max": 29.812570571899414
         }
       ],
       "after_last_step": {
-        "clip_fraction": 0.3285681903362274,
-        "affected_token_fraction": 0.1608804166316986,
-        "unclipped_surrogate": -0.008434979245066643,
-        "ratio_mean": 0.9191561937332153,
-        "ratio_min": 1.0106523257169542e-10,
-        "ratio_max": 29.812570571899414
+        "clip_fraction": 0.32902202010154724,
+        "affected_token_fraction": 0.16122078895568848,
+        "unclipped_surrogate": -0.008203679695725441,
+        "ratio_mean": 0.9191746711730957,
+        "ratio_min": 1.0224036894879163e-10,
+        "ratio_max": 29.81255531311035
       }
     },
     "0.5": {
       "before_each_epoch": [
         {
           "epoch": 1,
-          "clipped_objective_loss": -0.02093414077989627,
-          "grad_norm": 0.06459961086511612,
-          "clip_fraction": 0.16916269063949585,
-          "affected_token_fraction": 0.082822784781456,
-          "unclipped_surrogate": -0.008417248725891113,
-          "ratio_mean": 0.9191285967826843,
-          "ratio_min": 1.0148652751507115e-10,
-          "ratio_max": 29.802671432495117
+          "clipped_objective_loss": -0.021096839713212086,
+          "grad_norm": 0.061941958963871,
+          "clip_fraction": 0.16859541833400726,
+          "affected_token_fraction": 0.08259586989879608,
+          "unclipped_surrogate": -0.008209764957427979,
+          "ratio_mean": 0.919123113155365,
+          "ratio_min": 1.027404133990828e-10,
+          "ratio_max": 29.81205940246582
         },
         {
           "epoch": 2,
-          "clipped_objective_loss": -0.020964202011650335,
-          "grad_norm": 0.06488790363073349,
+          "clipped_objective_loss": -0.021074370566661702,
+          "grad_norm": 0.06304017454385757,
           "clip_fraction": 0.16882233321666718,
           "affected_token_fraction": 0.082822784781456,
-          "unclipped_surrogate": -0.00838410947471857,
-          "ratio_mean": 0.9191174507141113,
-          "ratio_min": 1.0224465718522424e-10,
-          "ratio_max": 29.812570571899414
+          "unclipped_surrogate": -0.008231080137193203,
+          "ratio_mean": 0.9190948605537415,
+          "ratio_min": 9.97075200181996e-11,
+          "ratio_max": 29.8032169342041
         }
       ],
       "after_last_step": {
-        "clip_fraction": 0.16870887577533722,
-        "affected_token_fraction": 0.082822784781456,
-        "unclipped_surrogate": -0.008331851102411747,
-        "ratio_mean": 0.9191316962242126,
-        "ratio_min": 1.0084225121609336e-10,
-        "ratio_max": 29.812562942504883
+        "clip_fraction": 0.16893579065799713,
+        "affected_token_fraction": 0.08293623477220535,
+        "unclipped_surrogate": -0.008168372325599194,
+        "ratio_mean": 0.9192035794258118,
+        "ratio_min": 1.0130222355408947e-10,
+        "ratio_max": 29.812591552734375
       }
     }
   }
