@@ -1,0 +1,642 @@
+{
+  "stratum_key": "length_stratum",
+  "dataset": {
+    "standard_train": {
+      "n": 1500,
+      "frac_chosen_longer": 0.5626666666666666,
+      "frac_rejected_longer": 0.422,
+      "len_chosen": {
+        "n": 1500,
+        "mean": 282.11466666666666,
+        "std": 240.28337212029584,
+        "median": 235.5,
+        "q1": 68.0,
+        "q3": 444.0,
+        "iqr": 376.0,
+        "min": 1.0,
+        "max": 1084.0
+      },
+      "len_rejected": {
+        "n": 1500,
+        "mean": 239.66466666666668,
+        "std": 217.58078610915564,
+        "median": 175.0,
+        "q1": 61.0,
+        "q3": 372.25,
+        "iqr": 311.25,
+        "min": 0.0,
+        "max": 1065.0
+      },
+      "len_diff_chosen_minus_rejected": {
+        "n": 1500,
+        "mean": 42.45,
+        "std": 201.95892099759712,
+        "median": 18.0,
+        "q1": -62.0,
+        "q3": 137.0,
+        "iqr": 199.0,
+        "min": -906.0,
+        "max": 821.0
+      },
+      "corr_length_diff_vs_label": 0.20576219088117187
+    },
+    "length_balanced_train": {
+      "n": 1500,
+      "frac_chosen_longer": 0.49133333333333334,
+      "frac_rejected_longer": 0.486,
+      "len_chosen": {
+        "n": 1500,
+        "mean": 156.85533333333333,
+        "std": 105.79103096692201,
+        "median": 131.0,
+        "q1": 65.0,
+        "q3": 243.25,
+        "iqr": 178.25,
+        "min": 16.0,
+        "max": 384.0
+      },
+      "len_rejected": {
+        "n": 1500,
+        "mean": 151.692,
+        "std": 98.16001593564285,
+        "median": 131.0,
+        "q1": 70.0,
+        "q3": 222.0,
+        "iqr": 152.0,
+        "min": 16.0,
+        "max": 384.0
+      },
+      "len_diff_chosen_minus_rejected": {
+        "n": 1500,
+        "mean": 5.163333333333333,
+        "std": 108.29118143015732,
+        "median": 0.0,
+        "q1": -56.25,
+        "q3": 62.0,
+        "iqr": 118.25,
+        "min": -346.0,
+        "max": 361.0
+      },
+      "corr_length_diff_vs_label": 0.04764183223720884,
+      "stratum_counts": {
+        "rejected_longer": 500,
+        "preferred_longer": 500,
+        "length_matched": 500
+      }
+    },
+    "length_stratified_eval": {
+      "n": 246,
+      "frac_chosen_longer": 0.483739837398374,
+      "frac_rejected_longer": 0.5,
+      "len_chosen": {
+        "n": 246,
+        "mean": 147.45528455284554,
+        "std": 109.19869566631655,
+        "median": 114.5,
+        "q1": 48.25,
+        "q3": 230.0,
+        "iqr": 181.75,
+        "min": 16.0,
+        "max": 384.0
+      },
+      "len_rejected": {
+        "n": 246,
+        "mean": 144.760162601626,
+        "std": 104.88961835738142,
+        "median": 113.5,
+        "q1": 53.25,
+        "q3": 234.5,
+        "iqr": 181.25,
+        "min": 16.0,
+        "max": 382.0
+      },
+      "len_diff_chosen_minus_rejected": {
+        "n": 246,
+        "mean": 2.6951219512195124,
+        "std": 109.3916411787527,
+        "median": -0.5,
+        "q1": -55.75,
+        "q3": 61.25,
+        "iqr": 117.0,
+        "min": -355.0,
+        "max": 297.0
+      },
+      "corr_length_diff_vs_label": 0.024680075767903296,
+      "stratum_counts": {
+        "rejected_longer": 82,
+        "preferred_longer": 82,
+        "length_matched": 82
+      }
+    }
+  },
+  "conditions": {
+    "sft": {
+      "name": "sft",
+      "adapter": null,
+      "word_limit": {
+        "n": 10,
+        "reward": {
+          "n": 10,
+          "mean": 3.253125,
+          "std": 0.5330422878861613,
+          "median": 3.27734375,
+          "q1": 2.9580078125,
+          "q3": 3.5986328125,
+          "iqr": 0.640625,
+          "min": 2.21875,
+          "max": 4.1171875
+        },
+        "kl_per_token": 0.0,
+        "kl_per_sequence": {
+          "n": 10,
+          "mean": 0.0,
+          "std": 0.0,
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "iqr": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "length_tokens": {
+          "n": 10,
+          "mean": 45.8,
+          "std": 22.621523673999796,
+          "median": 38.0,
+          "q1": 32.25,
+          "q3": 47.75,
+          "iqr": 15.5,
+          "min": 25.0,
+          "max": 98.0
+        },
+        "length_words": {
+          "n": 10,
+          "mean": 38.8,
+          "std": 19.54368326481873,
+          "median": 32.0,
+          "q1": 28.75,
+          "q3": 40.0,
+          "iqr": 11.25,
+          "min": 21.0,
+          "max": 86.0
+        },
+        "truncated_frac": 0.0,
+        "eos_frac": 1.0,
+        "compliance_rate": 0.7,
+        "n_with_parsed_limit": 10,
+        "words_over_limit": {
+          "n": 10,
+          "mean": 7.2,
+          "std": 16.04022720814418,
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 6.0,
+          "iqr": 6.0,
+          "min": 0.0,
+          "max": 51.0
+        }
+      },
+      "word_limit_violations": [
+        {
+          "prompt": "Explain the role of a learning rate in at most 35 words.",
+          "response": "A learning rate is a hyperparameter that determines how much to adjust the model's weights during training. It controls the step size and speed of weight updates towards minimizing loss. A high learning rate can cause large jumps between epochs but may lead to overshooting local minima; conversely, a low learning rate ensures stable convergence but requires more iterations to achieve minimal error. Finding an optimal learning rate is crucial for efficient training without getting stuck in poor solutions or diverging from the optimal path.",
+          "reward": 4.1171875,
+          "kl_seq": 0.0,
+          "length_tokens": 98,
+          "length_words": 86,
+          "terminated_with_eos": true,
+          "truncated": false,
+          "prompt_id": "wl07",
+          "word_limit": 35,
+          "compliant": 0.0
+        },
+        {
+          "prompt": "Describe one advantage and one limitation of attention in at most 45 words.",
+          "response": "**Advantage:**\nAttention enables systems to focus on relevant information while ignoring irrelevant data, enhancing efficiency and accuracy in processing large amounts of information.\n\n**Limitation:**\nAttention can be limited by the amount of available resources or knowledge, leading to biases if not managed carefully, as it may prioritize certain aspects over others based on past experiences or learned patterns.",
+          "reward": 3.115234375,
+          "kl_seq": 0.0,
+          "length_tokens": 72,
+          "length_words": 58,
+          "terminated_with_eos": true,
+          "truncated": false,
+          "prompt_id": "wl05",
+          "word_limit": 45,
+          "compliant": 0.0
+        },
+        {
+          "prompt": "Define overfitting in no more than 25 words.",
+          "response": "Overfitting occurs when a model performs well on training data but poorly on unseen test data due to excessive complexity or fitting the noise in the training data rather than the underlying pattern.",
+          "reward": 3.607421875,
+          "kl_seq": 0.0,
+          "length_tokens": 37,
+          "length_words": 33,
+          "terminated_with_eos": true,
+          "truncated": false,
+          "prompt_id": "wl02",
+          "word_limit": 25,
+          "compliant": 0.0
+        }
+      ]
+    },
+    "standard": {
+      "name": "standard",
+      "adapter": "outputs/task1_dpo/standard",
+      "beta_for_loss": 0.1,
+      "overall": {
+        "n": 246,
+        "dpo_loss": 0.6817139930976963,
+        "preference_accuracy": 0.5691056847572327,
+        "raw_policy_logp_accuracy": 0.5569105744361877,
+        "margin": {
+          "n": 246,
+          "mean": 0.2855798071477471,
+          "std": 1.4878386932257066,
+          "median": 0.24577713012695312,
+          "q1": -0.44586181640625,
+          "q3": 0.877291202545166,
+          "iqr": 1.323153018951416,
+          "min": -3.9372940063476562,
+          "max": 5.464752197265625
+        },
+        "implicit_reward_chosen_mean": -0.07654884031148462,
+        "implicit_reward_rejected_mean": -0.10510682102625933
+      },
+      "by_stratum": {
+        "length_matched": {
+          "n": 82,
+          "dpo_loss": 0.6833771652103563,
+          "preference_accuracy": 0.5975610017776489,
+          "raw_policy_logp_accuracy": 0.5975610017776489,
+          "margin": {
+            "n": 82,
+            "mean": 0.2338714417887897,
+            "std": 1.2290832413088777,
+            "median": 0.14554369449615479,
+            "q1": -0.2243490219116211,
+            "q3": 0.6573023796081543,
+            "iqr": 0.8816514015197754,
+            "min": -3.54541015625,
+            "max": 5.464752197265625
+          },
+          "implicit_reward_chosen_mean": -0.05545258507495974,
+          "implicit_reward_rejected_mean": -0.0788397292538387
+        },
+        "preferred_longer": {
+          "n": 82,
+          "dpo_loss": 0.7027769160258198,
+          "preference_accuracy": 0.47560974955558777,
+          "raw_policy_logp_accuracy": 0.10975609719753265,
+          "margin": {
+            "n": 82,
+            "mean": -0.13967735011403154,
+            "std": 1.4594719372593161,
+            "median": -0.22137832641601562,
+            "q1": -1.0968117713928223,
+            "q3": 0.5911865234375,
+            "iqr": 1.6879982948303223,
+            "min": -3.9372940063476562,
+            "max": 4.46075439453125
+          },
+          "implicit_reward_chosen_mean": -0.109330600645484,
+          "implicit_reward_rejected_mean": -0.09536286563408085
+        },
+        "rejected_longer": {
+          "n": 82,
+          "dpo_loss": 0.6589878980569126,
+          "preference_accuracy": 0.6341463327407837,
+          "raw_policy_logp_accuracy": 0.9634146094322205,
+          "margin": {
+            "n": 82,
+            "mean": 0.7625453297684832,
+            "std": 1.6244564000699782,
+            "median": 0.7121772766113281,
+            "q1": -0.2838134765625,
+            "q3": 1.6667289733886719,
+            "iqr": 1.9505424499511719,
+            "min": -3.7431793212890625,
+            "max": 4.748382568359375
+          },
+          "implicit_reward_chosen_mean": -0.0648633352140101,
+          "implicit_reward_rejected_mean": -0.14111786819085845
+        }
+      },
+      "word_limit": {
+        "n": 10,
+        "reward": {
+          "n": 10,
+          "mean": 3.3212890625,
+          "std": 0.48108873624117343,
+          "median": 3.1611328125,
+          "q1": 2.9501953125,
+          "q3": 3.5615234375,
+          "iqr": 0.611328125,
+          "min": 2.845703125,
+          "max": 4.2265625
+        },
+        "kl_per_token": 0.0014116021682066746,
+        "kl_per_sequence": {
+          "n": 10,
+          "mean": 0.07086242735385895,
+          "std": 0.19702261175641483,
+          "median": 0.011486586183309555,
+          "q1": -0.060510389506816864,
+          "q3": 0.24199262633919716,
+          "iqr": 0.302503015846014,
+          "min": -0.22937825322151184,
+          "max": 0.35994088649749756
+        },
+        "length_tokens": {
+          "n": 10,
+          "mean": 50.2,
+          "std": 23.403703410642798,
+          "median": 39.0,
+          "q1": 34.5,
+          "q3": 61.25,
+          "iqr": 26.75,
+          "min": 30.0,
+          "max": 91.0
+        },
+        "length_words": {
+          "n": 10,
+          "mean": 42.4,
+          "std": 19.551641022345585,
+          "median": 33.5,
+          "q1": 29.5,
+          "q3": 47.75,
+          "iqr": 18.25,
+          "min": 26.0,
+          "max": 79.0
+        },
+        "truncated_frac": 0.0,
+        "eos_frac": 1.0,
+        "compliance_rate": 0.6,
+        "n_with_parsed_limit": 10,
+        "words_over_limit": {
+          "n": 10,
+          "mean": 8.8,
+          "std": 15.208184930782796,
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 7.5,
+          "iqr": 7.5,
+          "min": 0.0,
+          "max": 40.0
+        }
+      },
+      "word_limit_violations": [
+        {
+          "prompt": "Explain the role of a learning rate in at most 35 words.",
+          "response": "A learning rate is a hyperparameter that determines the step size at each iteration while optimizing a machine learning model's parameters to minimize an objective function. It controls how much weight changes per epoch during training and helps avoid overshooting the optimal solution. A suitable learning rate balances convergence speed and stability, too fast leading to oscillations, slow leading to inefficiencies. Adjusting it based on validation metrics ensures effective optimization without overfitting or underfitting.",
+          "reward": 3.57421875,
+          "kl_seq": 0.24765066802501678,
+          "length_tokens": 91,
+          "length_words": 75,
+          "terminated_with_eos": true,
+          "truncated": false,
+          "prompt_id": "wl07",
+          "word_limit": 35,
+          "compliant": 0.0
+        },
+        {
+          "prompt": "Explain what a frozen reference model does in RLHF in at most 45 words.",
+          "response": "In Reinforcement Learning with Human Feedback (RLHF), a frozen reference model refers to a pre-trained AI system that is used as the basis for refining human-generated feedback during training. This approach allows for continuous improvement of AI models without retraining them from scratch each time new data or feedback is received. The frozen reference acts like a constant point of accuracy and quality, guiding the learning process towards more sophisticated and effective interactions between humans and machines.",
+          "reward": 2.86328125,
+          "kl_seq": -0.04963351786136627,
+          "length_tokens": 89,
+          "length_words": 79,
+          "terminated_with_eos": true,
+          "truncated": false,
+          "prompt_id": "wl10",
+          "word_limit": 45,
+          "compliant": 0.0
+        },
+        {
+          "prompt": "Define overfitting in no more than 25 words.",
+          "response": "Overfitting occurs when a model performs well on training data but poorly on unseen testing data due to excessive complexity or fitting the noise in the training data rather than the underlying pattern.",
+          "reward": 3.5234375,
+          "kl_seq": 0.29538393020629883,
+          "length_tokens": 37,
+          "length_words": 33,
+          "terminated_with_eos": true,
+          "truncated": false,
+          "prompt_id": "wl02",
+          "word_limit": 25,
+          "compliant": 0.0
+        },
+        {
+          "prompt": "Describe one advantage and one limitation of attention in at most 45 words.",
+          "response": "**Advantage:**\nAttention enables systems to focus on relevant information while ignoring irrelevant data, enhancing efficiency and accuracy in processing large amounts of information.\n\n**Limitation:**\nAttention can be limited due to cognitive fatigue or the presence of distracting elements, leading to suboptimal performance when dealing with complex tasks that require sustained concentration.",
+          "reward": 3.943359375,
+          "kl_seq": 0.038944609463214874,
+          "length_tokens": 66,
+          "length_words": 51,
+          "terminated_with_eos": true,
+          "truncated": false,
+          "prompt_id": "wl05",
+          "word_limit": 45,
+          "compliant": 0.0
+        }
+      ]
+    },
+    "length_balanced": {
+      "name": "length_balanced",
+      "adapter": "outputs/task1_dpo/length_balanced",
+      "beta_for_loss": 0.1,
+      "overall": {
+        "n": 246,
+        "dpo_loss": 0.6772301413037156,
+        "preference_accuracy": 0.6056910753250122,
+        "raw_policy_logp_accuracy": 0.5569105744361877,
+        "margin": {
+          "n": 246,
+          "mean": 0.410457462920406,
+          "std": 1.8851576313690646,
+          "median": 0.2511444091796875,
+          "q1": -0.5006484985351562,
+          "q3": 1.2683919668197632,
+          "iqr": 1.7690404653549194,
+          "min": -5.936130523681641,
+          "max": 6.000631332397461
+        },
+        "implicit_reward_chosen_mean": -0.1290301117834037,
+        "implicit_reward_rejected_mean": -0.17007585807544431
+      },
+      "by_stratum": {
+        "length_matched": {
+          "n": 82,
+          "dpo_loss": 0.6781657794754964,
+          "preference_accuracy": 0.6219512224197388,
+          "raw_policy_logp_accuracy": 0.5975610017776489,
+          "margin": {
+            "n": 82,
+            "mean": 0.3397467841462391,
+            "std": 1.230528177862518,
+            "median": 0.17795038223266602,
+            "q1": -0.2689046859741211,
+            "q3": 0.8621835708618164,
+            "iqr": 1.1310882568359375,
+            "min": -2.6544952392578125,
+            "max": 4.831634521484375
+          },
+          "implicit_reward_chosen_mean": -0.09584915848766885,
+          "implicit_reward_rejected_mean": -0.12982383690229277
+        },
+        "preferred_longer": {
+          "n": 82,
+          "dpo_loss": 0.723319218350285,
+          "preference_accuracy": 0.4146341383457184,
+          "raw_policy_logp_accuracy": 0.10975609719753265,
+          "margin": {
+            "n": 82,
+            "mean": -0.5141040988084746,
+            "std": 1.835857735954653,
+            "median": -0.35344696044921875,
+            "q1": -1.6322479248046875,
+            "q3": 0.6358528137207031,
+            "iqr": 2.2681007385253906,
+            "min": -5.936130523681641,
+            "max": 3.9561920166015625
+          },
+          "implicit_reward_chosen_mean": -0.19146024657458793,
+          "implicit_reward_rejected_mean": -0.14004983669374046
+        },
+        "rejected_longer": {
+          "n": 82,
+          "dpo_loss": 0.6302054260853652,
+          "preference_accuracy": 0.7804877758026123,
+          "raw_policy_logp_accuracy": 0.9634146094322205,
+          "margin": {
+            "n": 82,
+            "mean": 1.4057297034234535,
+            "std": 1.997850886244151,
+            "median": 1.1322898864746094,
+            "q1": 0.12494659423828125,
+            "q3": 2.8094120025634766,
+            "iqr": 2.6844654083251953,
+            "min": -3.5108795166015625,
+            "max": 6.000631332397461
+          },
+          "implicit_reward_chosen_mean": -0.09978093028795429,
+          "implicit_reward_rejected_mean": -0.24035390063029963
+        }
+      },
+      "word_limit": {
+        "n": 10,
+        "reward": {
+          "n": 10,
+          "mean": 3.38984375,
+          "std": 0.46515658240946584,
+          "median": 3.4521484375,
+          "q1": 3.02197265625,
+          "q3": 3.5703125,
+          "iqr": 0.54833984375,
+          "min": 2.7265625,
+          "max": 4.19921875
+        },
+        "kl_per_token": 0.003737455558903674,
+        "kl_per_sequence": {
+          "n": 10,
+          "mean": 0.17566041946411132,
+          "std": 0.19150004491175426,
+          "median": 0.22844375669956207,
+          "q1": 0.04448612406849861,
+          "q3": 0.30942074209451675,
+          "iqr": 0.26493461802601814,
+          "min": -0.12848567962646484,
+          "max": 0.4160764217376709
+        },
+        "length_tokens": {
+          "n": 10,
+          "mean": 47.0,
+          "std": 21.602468994692867,
+          "median": 38.0,
+          "q1": 32.25,
+          "q3": 64.25,
+          "iqr": 32.0,
+          "min": 24.0,
+          "max": 81.0
+        },
+        "length_words": {
+          "n": 10,
+          "mean": 39.8,
+          "std": 18.383567541572432,
+          "median": 32.0,
+          "q1": 28.75,
+          "q3": 52.0,
+          "iqr": 23.25,
+          "min": 19.0,
+          "max": 71.0
+        },
+        "truncated_frac": 0.0,
+        "eos_frac": 1.0,
+        "compliance_rate": 0.6,
+        "n_with_parsed_limit": 10,
+        "words_over_limit": {
+          "n": 10,
+          "mean": 7.9,
+          "std": 12.42264956529895,
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 11.75,
+          "iqr": 11.75,
+          "min": 0.0,
+          "max": 36.0
+        }
+      },
+      "word_limit_violations": [
+        {
+          "prompt": "Explain the role of a learning rate in at most 35 words.",
+          "response": "A learning rate is a hyperparameter that determines how much to adjust the model's weights during training based on their errors. It controls the step size and helps navigate through complex landscapes with many local minima. A high learning rate can cause overshooting and instability, while a low one may lead to slow convergence or even divergence. Properly choosing an optimal learning rate is crucial for effective gradient descent optimization.",
+          "reward": 3.912109375,
+          "kl_seq": 0.22462496161460876,
+          "length_tokens": 81,
+          "length_words": 71,
+          "terminated_with_eos": true,
+          "truncated": false,
+          "prompt_id": "wl07",
+          "word_limit": 35,
+          "compliant": 0.0
+        },
+        {
+          "prompt": "Explain what a frozen reference model does in RLHF in at most 45 words.",
+          "response": "In Reinforcement Learning with Human Feedback (RLHF), a frozen reference model refers to using an existing pre-trained AI system as the baseline for generating new tasks or responses. This model is \"frozen\" and not updated during training, allowing it to learn from human feedback without being influenced by recent changes. It serves as a benchmark against which human-generated corrections can be compared and improved upon.",
+          "reward": 2.7265625,
+          "kl_seq": 0.3751482665538788,
+          "length_tokens": 79,
+          "length_words": 67,
+          "terminated_with_eos": true,
+          "truncated": false,
+          "prompt_id": "wl10",
+          "word_limit": 45,
+          "compliant": 0.0
+        },
+        {
+          "prompt": "Describe one advantage and one limitation of attention in at most 45 words.",
+          "response": "**Advantage:**\nAttention enables systems to focus on relevant information while ignoring irrelevant data, enhancing efficiency and accuracy in processing large amounts of information.\n\n**Limitation:**\nAttention can be limited by the amount of available resources or knowledge, leading to biases if not managed carefully, as it may prioritize certain aspects over others based on past experiences or learned patterns.",
+          "reward": 3.416015625,
+          "kl_seq": -0.12848567962646484,
+          "length_tokens": 72,
+          "length_words": 58,
+          "terminated_with_eos": true,
+          "truncated": false,
+          "prompt_id": "wl05",
+          "word_limit": 45,
+          "compliant": 0.0
+        },
+        {
+          "prompt": "Define overfitting in no more than 25 words.",
+          "response": "Overfitting occurs when a model performs well on training data but poorly on unseen testing data due to excessive complexity or fitting the noise in the training data rather than the underlying pattern.",
+          "reward": 3.5234375,
+          "kl_seq": 0.31549587845802307,
+          "length_tokens": 37,
+          "length_words": 33,
+          "terminated_with_eos": true,
+          "truncated": false,
+          "prompt_id": "wl02",
+          "word_limit": 25,
+          "compliant": 0.0
+        }
+      ]
+    }
+  }
+}

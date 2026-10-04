@@ -1,0 +1,47 @@
+[
+  {
+    "beta": 0.03,
+    "examples": 600,
+    "optimizer_updates": 38,
+    "heldout_dpo_loss": 0.6914303985829794,
+    "preference_accuracy": 0.6233333349227905,
+    "margin_mean": 0.11632576782256365,
+    "kl_per_token": -0.00029869609744188316,
+    "kl_per_sequence_mean": -0.046991866875908575,
+    "reward_mean": 1.1413715362548829,
+    "reward_std": 1.5955391330284807,
+    "length_mean": 157.32333333333332,
+    "length_std": 104.0100592746841,
+    "truncated_frac": 0.43
+  },
+  {
+    "beta": 0.1,
+    "examples": 600,
+    "optimizer_updates": 38,
+    "heldout_dpo_loss": 0.6877674466690589,
+    "preference_accuracy": 0.6433333158493042,
+    "margin_mean": 0.11306021715514362,
+    "kl_per_token": -0.00031154393955975363,
+    "kl_per_sequence_mean": -0.0485863152371409,
+    "reward_mean": 1.093892771402995,
+    "reward_std": 1.5112134677302322,
+    "length_mean": 155.95333333333335,
+    "length_std": 107.17128082498493,
+    "truncated_frac": 0.44666666666666666
+  },
+  {
+    "beta": 0.3,
+    "examples": 600,
+    "optimizer_updates": 38,
+    "heldout_dpo_loss": 0.6793002790125229,
+    "preference_accuracy": 0.6266666650772095,
+    "margin_mean": 0.10724076945334673,
+    "kl_per_token": -0.0002791609054814984,
+    "kl_per_sequence_mean": -0.043830121845627824,
+    "reward_mean": 1.1613534545898438,
+    "reward_std": 1.5720653551339356,
+    "length_mean": 157.00666666666666,
+    "length_std": 105.30748077532942,
+    "truncated_frac": 0.43
+  }
+]
