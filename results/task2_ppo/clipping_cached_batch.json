@@ -1,0 +1,114 @@
+{
+  "n_rows": 32,
+  "n_tokens": 8814,
+  "advantage_source": {
+    "reward": "reward model (recomputed)",
+    "values": "cache",
+    "advantages": "GAE from shaped rewards"
+  },
+  "length_mismatches": [],
+  "epsilons": {
+    "0.05": {
+      "before_each_epoch": [
+        {
+          "epoch": 1,
+          "clipped_objective_loss": -0.0721486915861932,
+          "grad_norm": 0.056774746626615524,
+          "clip_fraction": 0.5465168952941895,
+          "affected_token_fraction": 0.26877695322036743,
+          "unclipped_surrogate": -0.008417248725891113,
+          "ratio_mean": 0.9191285967826843,
+          "ratio_min": 1.0148652751507115e-10,
+          "ratio_max": 29.802671432495117
+        },
+        {
+          "epoch": 2,
+          "clipped_objective_loss": -0.07218066293434315,
+          "grad_norm": 0.05473526194691658,
+          "clip_fraction": 0.5466303825378418,
+          "affected_token_fraction": 0.26923078298568726,
+          "unclipped_surrogate": -0.008410310372710228,
+          "ratio_mean": 0.9190884232521057,
+          "ratio_min": 1.0161960162236028e-10,
+          "ratio_max": 29.86174774169922
+        }
+      ],
+      "after_last_step": {
+        "clip_fraction": 0.5475379824638367,
+        "affected_token_fraction": 0.26923078298568726,
+        "unclipped_surrogate": -0.008402994833886623,
+        "ratio_mean": 0.9191626906394958,
+        "ratio_min": 1.0100664749046473e-10,
+        "ratio_max": 29.81264877319336
+      }
+    },
+    "0.2": {
+      "before_each_epoch": [
+        {
+          "epoch": 1,
+          "clipped_objective_loss": -0.04780845918049365,
+          "grad_norm": 0.06744765490293503,
+          "clip_fraction": 0.3286816477775574,
+          "affected_token_fraction": 0.16099387407302856,
+          "unclipped_surrogate": -0.008417248725891113,
+          "ratio_mean": 0.9191285967826843,
+          "ratio_min": 1.0148652751507115e-10,
+          "ratio_max": 29.802671432495117
+        },
+        {
+          "epoch": 2,
+          "clipped_objective_loss": -0.047875052860403146,
+          "grad_norm": 0.06361892819404602,
+          "clip_fraction": 0.3286816477775574,
+          "affected_token_fraction": 0.16190151870250702,
+          "unclipped_surrogate": -0.00840336550027132,
+          "ratio_mean": 0.919170618057251,
+          "ratio_min": 1.0022863095038304e-10,
+          "ratio_max": 29.870975494384766
+        }
+      ],
+      "after_last_step": {
+        "clip_fraction": 0.3285681903362274,
+        "affected_token_fraction": 0.1608804166316986,
+        "unclipped_surrogate": -0.008434979245066643,
+        "ratio_mean": 0.9191561937332153,
+        "ratio_min": 1.0106523257169542e-10,
+        "ratio_max": 29.812570571899414
+      }
+    },
+    "0.5": {
+      "before_each_epoch": [
+        {
+          "epoch": 1,
+          "clipped_objective_loss": -0.02093414077989627,
+          "grad_norm": 0.06459961086511612,
+          "clip_fraction": 0.16916269063949585,
+          "affected_token_fraction": 0.082822784781456,
+          "unclipped_surrogate": -0.008417248725891113,
+          "ratio_mean": 0.9191285967826843,
+          "ratio_min": 1.0148652751507115e-10,
+          "ratio_max": 29.802671432495117
+        },
+        {
+          "epoch": 2,
+          "clipped_objective_loss": -0.020964202011650335,
+          "grad_norm": 0.06488790363073349,
+          "clip_fraction": 0.16882233321666718,
+          "affected_token_fraction": 0.082822784781456,
+          "unclipped_surrogate": -0.00838410947471857,
+          "ratio_mean": 0.9191174507141113,
+          "ratio_min": 1.0224465718522424e-10,
+          "ratio_max": 29.812570571899414
+        }
+      ],
+      "after_last_step": {
+        "clip_fraction": 0.16870887577533722,
+        "affected_token_fraction": 0.082822784781456,
+        "unclipped_surrogate": -0.008331851102411747,
+        "ratio_mean": 0.9191316962242126,
+        "ratio_min": 1.0084225121609336e-10,
+        "ratio_max": 29.812562942504883
+      }
+    }
+  }
+}
