@@ -1,0 +1,149 @@
+{
+  "policies": {
+    "sft": {
+      "gsm_accuracy": 0.28,
+      "transfer_accuracy": 0.44,
+      "accuracy_drop": -0.15999999999999998,
+      "relative_drop": -0.5714285714285713,
+      "gsm_format": 0.3566666666666667,
+      "transfer_format": 0.57,
+      "gsm_length": 273.7266666666667,
+      "transfer_length": 163.31,
+      "gsm_failure_types": {
+        "no_final": 187,
+        "correct": 84,
+        "wrong_final": 23,
+        "no_final_truncated": 6
+      },
+      "transfer_failure_types": {
+        "no_final": 43,
+        "correct": 44,
+        "wrong_final": 13
+      }
+    },
+    "rlvr": {
+      "gsm_accuracy": 0.2833333333333333,
+      "transfer_accuracy": 0.47,
+      "accuracy_drop": -0.18666666666666665,
+      "relative_drop": -0.6588235294117647,
+      "gsm_format": 0.36666666666666664,
+      "transfer_format": 0.59,
+      "gsm_length": 275.3433333333333,
+      "transfer_length": 163.54,
+      "gsm_failure_types": {
+        "no_final": 184,
+        "correct": 85,
+        "wrong_final": 25,
+        "no_final_truncated": 6
+      },
+      "transfer_failure_types": {
+        "no_final": 41,
+        "correct": 47,
+        "wrong_final": 12
+      },
+      "gsm_ai_win_rate_vs_sft": 0.505,
+      "gsm_ai_wtl_vs_sft": [
+        8,
+        287,
+        5
+      ],
+      "gsm_accuracy_gain_vs_sft": 0.0033333333333332993,
+      "transfer_ai_win_rate_vs_sft": 0.525,
+      "transfer_ai_wtl_vs_sft": [
+        13,
+        79,
+        8
+      ],
+      "transfer_accuracy_gain_vs_sft": 0.02999999999999997,
+      "transfer_ai_win_rate_drop": -0.020000000000000018,
+      "gain_retained_out_of_domain": 9.000000000000083
+    },
+    "rlaif": {
+      "gsm_accuracy": 0.27,
+      "transfer_accuracy": 0.44,
+      "accuracy_drop": -0.16999999999999998,
+      "relative_drop": -0.6296296296296295,
+      "gsm_format": 0.3466666666666667,
+      "transfer_format": 0.58,
+      "gsm_length": 275.50666666666666,
+      "transfer_length": 164.39,
+      "gsm_failure_types": {
+        "no_final": 189,
+        "correct": 81,
+        "wrong_final": 23,
+        "no_final_truncated": 7
+      },
+      "transfer_failure_types": {
+        "no_final": 42,
+        "correct": 44,
+        "wrong_final": 14
+      },
+      "gsm_ai_win_rate_vs_sft": 0.49833333333333335,
+      "gsm_ai_wtl_vs_sft": [
+        4,
+        291,
+        5
+      ],
+      "gsm_accuracy_gain_vs_sft": -0.010000000000000009,
+      "transfer_ai_win_rate_vs_sft": 0.515,
+      "transfer_ai_wtl_vs_sft": [
+        12,
+        79,
+        9
+      ],
+      "transfer_accuracy_gain_vs_sft": 0.0,
+      "transfer_ai_win_rate_drop": -0.016666666666666663,
+      "gain_retained_out_of_domain": -0.0
+    }
+  },
+  "feedback_sources": {
+    "coverage": {
+      "rlvr_tie_rate_reasoning_only": 1.0,
+      "rlaif_distinguishes_reasoning_only": 0.0,
+      "gsm_judge_distinguishes_verifier_ties": [
+        0.031141868512110725,
+        0.030716723549488054
+      ]
+    },
+    "noise": {
+      "rlaif_order_inconsistency": {
+        "reasoning_corruption": 0.0,
+        "wrong_final": 0.15000000000000002,
+        "persuasive_filler": 0.0,
+        "gold_distractor": 0.30000000000000004
+      },
+      "gsm_judge_disagrees_with_verifier_on_decisive_pairs": [
+        0.8181818181818181,
+        1.0
+      ],
+      "rlvr_verifier_mismatches_vs_expected": 0
+    },
+    "exploitability": {
+      "filler_wrong_preference": {
+        "rlvr": 0.0,
+        "rlaif": 0.25
+      },
+      "gold_distractor_wrong_preference": {
+        "rlvr": 0.0,
+        "rlaif": 0.0
+      },
+      "rlaif_group_reward_clean_vs_filler": [
+        0.5,
+        0.5875
+      ]
+    },
+    "cost": {
+      "rlvr": "regex + numeric compare; negligible, no model call",
+      "rlaif_seconds_per_judge_call_gsm": 0.05239269400181452,
+      "rlaif_judge_calls_per_group_of_K": "K(K-1)/2 (6 for K=4) per prompt per training step"
+    },
+    "S_reason": {
+      "rlvr": 0.0,
+      "rlaif": 0.0
+    },
+    "S_outcome": {
+      "rlvr": 1.0,
+      "rlaif": 0.075
+    }
+  }
+}

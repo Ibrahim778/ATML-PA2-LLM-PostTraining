@@ -1,0 +1,102 @@
+{
+  "dataset": "transfer",
+  "n": 100,
+  "decoding": "greedy",
+  "max_new_tokens": 512,
+  "policies": {
+    "sft": {
+      "n": 100,
+      "exact_accuracy": 0.44,
+      "format_compliance": 0.57,
+      "length_mean": 163.31,
+      "length_std": 71.55060298752755,
+      "length_median": 143.0,
+      "truncation_rate": 0.0,
+      "failure_types": {
+        "no_final": 43,
+        "correct": 44,
+        "wrong_final": 13
+      },
+      "wrong_final_with_gold_in_text": 6
+    },
+    "rlvr": {
+      "n": 100,
+      "exact_accuracy": 0.47,
+      "format_compliance": 0.59,
+      "length_mean": 163.54,
+      "length_std": 71.48347552216016,
+      "length_median": 140.0,
+      "truncation_rate": 0.0,
+      "failure_types": {
+        "no_final": 41,
+        "correct": 47,
+        "wrong_final": 12
+      },
+      "wrong_final_with_gold_in_text": 5
+    },
+    "rlaif": {
+      "n": 100,
+      "exact_accuracy": 0.44,
+      "format_compliance": 0.58,
+      "length_mean": 164.39,
+      "length_std": 72.83146381346542,
+      "length_median": 143.0,
+      "truncation_rate": 0.0,
+      "failure_types": {
+        "no_final": 42,
+        "correct": 44,
+        "wrong_final": 14
+      },
+      "wrong_final_with_gold_in_text": 7
+    }
+  },
+  "pairwise": {
+    "rlvr_vs_sft": {
+      "a": "rlvr",
+      "b": "sft",
+      "n": 100,
+      "win_rate_a": 0.525,
+      "wins_a": 13,
+      "ties": 79,
+      "losses_a": 8,
+      "verifier_decisive_pairs": 3,
+      "judge_agrees_with_verifier": 0.6666666666666666,
+      "judge_ties_on_verifier_decisive": 0.3333333333333333,
+      "verifier_tied_pairs": 97,
+      "judge_distinguishes_verifier_ties": 0.1958762886597938
+    },
+    "rlaif_vs_sft": {
+      "a": "rlaif",
+      "b": "sft",
+      "n": 100,
+      "win_rate_a": 0.515,
+      "wins_a": 12,
+      "ties": 79,
+      "losses_a": 9,
+      "verifier_decisive_pairs": 2,
+      "judge_agrees_with_verifier": 0.5,
+      "judge_ties_on_verifier_decisive": 0.5,
+      "verifier_tied_pairs": 98,
+      "judge_distinguishes_verifier_ties": 0.20408163265306123
+    },
+    "rlvr_vs_rlaif": {
+      "a": "rlvr",
+      "b": "rlaif",
+      "n": 100,
+      "win_rate_a": 0.525,
+      "wins_a": 12,
+      "ties": 81,
+      "losses_a": 7,
+      "verifier_decisive_pairs": 3,
+      "judge_agrees_with_verifier": 0.3333333333333333,
+      "judge_ties_on_verifier_decisive": 0.6666666666666666,
+      "verifier_tied_pairs": 97,
+      "judge_distinguishes_verifier_ties": 0.18556701030927836
+    }
+  },
+  "judge_cost": {
+    "new_judge_calls": 118,
+    "seconds": 5.870809219777584,
+    "seconds_per_new_call": 0.049752622463945614
+  }
+}

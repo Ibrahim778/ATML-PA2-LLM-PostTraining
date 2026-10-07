@@ -8,9 +8,9 @@
   "kl_beta": 0.1,
   "policy_learning_rate": 3e-06,
   "seed": 6304,
-  "generated_tokens_total": 6106,
-  "wall_clock_s": 206.16121520055458,
-  "peak_vram_gb": 6.669545650482178,
+  "generated_tokens_total": 6965,
+  "wall_clock_s": 80.14945161901414,
+  "peak_vram_gb": 6.716830730438232,
   "adapter_path": "/home/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/standard",
   "value_path": "/home/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/standard_value",
   "train_log": "/home/ATML-PA2-LLM-PostTraining/results/task2_ppo/standard_train_log.jsonl"
