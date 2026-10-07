@@ -1,0 +1,44 @@
+{
+  "name": "standard",
+  "adapter": "outputs/task3_grpo/standard",
+  "n_prompts": 200,
+  "seed": 6304,
+  "decoding": {
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "do_sample": true,
+    "max_new_tokens": 768
+  },
+  "rm_score": {
+    "n": 200,
+    "mean": 1.583594970703125,
+    "std": 1.3797997699539812,
+    "median": 1.75732421875,
+    "iqr": 1.678466796875,
+    "min": -5.0625,
+    "max": 4.17578125
+  },
+  "kl_per_token": 9.952414901344358e-05,
+  "kl_per_sequence": {
+    "n": 200,
+    "mean": 0.027764749471025425,
+    "std": 0.09504828265811267,
+    "median": 0.012931696139276028,
+    "iqr": 0.08586346637457609,
+    "min": -0.3266374468803406,
+    "max": 0.4681410491466522
+  },
+  "entropy_per_token": 0.9857605067367932,
+  "length_tokens": {
+    "n": 200,
+    "mean": 278.975,
+    "std": 251.45918752344235,
+    "median": 212.0,
+    "iqr": 414.75,
+    "min": 2.0,
+    "max": 768.0
+  },
+  "eos_rate": 0.91,
+  "truncation_rate": 0.09,
+  "wall_clock_s": 408.8968295175582
+}
