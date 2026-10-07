@@ -14,7 +14,7 @@ def group_relative_advantages(rewards: torch.Tensor, group_ids: torch.Tensor, ep
     # Starter implementation: students must validate the grouping logic carefully.
     mean = rewards.mean()
     std = rewards.std(unbiased=False).clamp_min(eps)
-    return (rewards - mean) / std
+    return (rewards - mean) / (std + eps)
 
 
 def grpo_policy_loss(
