@@ -37,23 +37,31 @@ def main():
     pd.DataFrame({"xstest_id": ids, "manual_label": [""] * len(ids)}).to_csv(outdir / "manual_audit_ids.csv", index=False)
     print("Wrote fixed audit IDs:", outdir / "manual_audit_ids.csv")
 
-    # Blind labelling sheet: the fixed IDs joined to every policy's response, shuffled, policy name hidden,
-    # and no AI labels anywhere in it. The key mapping audit_row -> policy is written to a separate file.
+    # Blind labelling sheet: exactly the fixed 60 examples (one response per audited prompt). Each prompt is paired
+    # with ONE policy's response, assigned round-robin within each prompt class after a seeded shuffle, so every
+    # policy contributes ~equally (15 rows: 7-8 SAFE + 7-8 UNSAFE). Rows are shuffled, the policy name is hidden
+    # (key written separately) and no AI labels appear anywhere in the sheet.
     sheet_path, key_path = outdir / "manual_audit_sheet.csv", outdir / "manual_audit_key.csv"
     if sheet_path.exists():
         existing = pd.read_csv(sheet_path, keep_default_na=False)
         if (existing["manual_label"].astype(str).str.strip() != "").any():
             print(f"{sheet_path} already contains manual labels; not overwriting.")
             return
-    rows = []
+    responses = {}
     for policy in POLICIES:
         path = outdir / f"generated_{policy}.jsonl"
         if not path.exists():
-            print(f"WARNING: {path} missing; {policy} not included in the audit sheet")
-            continue
-        by_id = {r["xstest_id"]: r for r in read_jsonl(path)}
-        for i in ids:
-            r = by_id[i]
+            raise FileNotFoundError(f"{path} missing; generate all four policies before building the audit sheet")
+        responses[policy] = {r["xstest_id"]: r for r in read_jsonl(path)}
+    rng = np.random.default_rng(int(cfg["seed"]))
+    rows = []
+    for label in ("SAFE", "UNSAFE"):
+        class_ids = [i for i in ids if responses["sft"][i]["benchmark_class"] == label]
+        class_ids = [class_ids[j] for j in rng.permutation(len(class_ids))]
+        offset = int(rng.integers(len(POLICIES)))  # rotate so the 8-vs-7 split differs between classes
+        for j, i in enumerate(class_ids):
+            policy = POLICIES[(j + offset) % len(POLICIES)]
+            r = responses[policy][i]
             rows.append({"xstest_id": i, "policy": policy, "benchmark_class": r["benchmark_class"], "type": r["type"],
                          "prompt": r["prompt"], "response": r["response"]})
     df = pd.DataFrame(rows).sample(frac=1.0, random_state=int(cfg["seed"])).reset_index(drop=True)
@@ -63,7 +71,9 @@ def main():
     sheet["manual_label"] = ""
     sheet["notes"] = ""
     sheet.to_csv(sheet_path, index=False)
-    print(f"Wrote blind audit sheet ({len(sheet)} rows = {len(ids)} prompts x {len(rows) // max(1, len(ids))} policies): {sheet_path}")
+    counts = df.groupby(["policy", "benchmark_class"]).size().unstack(fill_value=0)
+    print(f"Wrote blind audit sheet ({len(sheet)} rows, one response per audited prompt): {sheet_path}")
+    print("Responses per policy x class:\n" + counts.to_string())
     print(f"Fill `manual_label` with one of: {LABEL_HELP}")
     print("Label without opening judged_*.jsonl first. Key (row -> policy) kept separately in", key_path)
 
