@@ -1,0 +1,414 @@
+{
+  "n_labelled": 60,
+  "n_unlabelled_rows": 0,
+  "overall": {
+    "n": 60,
+    "agreement": {
+      "rate": 0.7333333333333333,
+      "k": 44,
+      "n": 60,
+      "ci95": [
+        0.6099104639810865,
+        0.8286750351292115
+      ]
+    },
+    "cohen_kappa": 0.5353339787028073,
+    "ai_ambiguous_rate": 0.0,
+    "manual_ambiguous_rate": 0.11666666666666667,
+    "confusion_manual_rows_x_ai_cols": {
+      "SAFE_ANSWER": {
+        "SAFE_ANSWER": 15,
+        "JUSTIFIED_REFUSAL": 1,
+        "UNSAFE_COMPLIANCE": 0,
+        "OVER_REFUSAL": 0,
+        "AMBIGUOUS": 0
+      },
+      "JUSTIFIED_REFUSAL": {
+        "SAFE_ANSWER": 1,
+        "JUSTIFIED_REFUSAL": 29,
+        "UNSAFE_COMPLIANCE": 0,
+        "OVER_REFUSAL": 0,
+        "AMBIGUOUS": 0
+      },
+      "UNSAFE_COMPLIANCE": {
+        "SAFE_ANSWER": 0,
+        "JUSTIFIED_REFUSAL": 0,
+        "UNSAFE_COMPLIANCE": 0,
+        "OVER_REFUSAL": 0,
+        "AMBIGUOUS": 0
+      },
+      "OVER_REFUSAL": {
+        "SAFE_ANSWER": 1,
+        "JUSTIFIED_REFUSAL": 6,
+        "UNSAFE_COMPLIANCE": 0,
+        "OVER_REFUSAL": 0,
+        "AMBIGUOUS": 0
+      },
+      "AMBIGUOUS": {
+        "SAFE_ANSWER": 2,
+        "JUSTIFIED_REFUSAL": 5,
+        "UNSAFE_COMPLIANCE": 0,
+        "OVER_REFUSAL": 0,
+        "AMBIGUOUS": 0
+      }
+    }
+  },
+  "by_policy": {
+    "sft": {
+      "n": 15,
+      "agreement": {
+        "rate": 0.6,
+        "k": 9,
+        "n": 15,
+        "ci95": [
+          0.357464427565077,
+          0.8017577191740534
+        ]
+      },
+      "cohen_kappa": 0.33333333333333326,
+      "ai_ambiguous_rate": 0.0,
+      "manual_ambiguous_rate": 0.2,
+      "confusion_manual_rows_x_ai_cols": {
+        "SAFE_ANSWER": {
+          "SAFE_ANSWER": 3,
+          "JUSTIFIED_REFUSAL": 1,
+          "UNSAFE_COMPLIANCE": 0,
+          "OVER_REFUSAL": 0,
+          "AMBIGUOUS": 0
+        },
+        "JUSTIFIED_REFUSAL": {
+          "SAFE_ANSWER": 1,
+          "JUSTIFIED_REFUSAL": 6,
+          "UNSAFE_COMPLIANCE": 0,
+          "OVER_REFUSAL": 0,
+          "AMBIGUOUS": 0
+        },
+        "UNSAFE_COMPLIANCE": {
+          "SAFE_ANSWER": 0,
+          "JUSTIFIED_REFUSAL": 0,
+          "UNSAFE_COMPLIANCE": 0,
+          "OVER_REFUSAL": 0,
+          "AMBIGUOUS": 0
+        },
+        "OVER_REFUSAL": {
+          "SAFE_ANSWER": 0,
+          "JUSTIFIED_REFUSAL": 1,
+          "UNSAFE_COMPLIANCE": 0,
+          "OVER_REFUSAL": 0,
+          "AMBIGUOUS": 0
+        },
+        "AMBIGUOUS": {
+          "SAFE_ANSWER": 1,
+          "JUSTIFIED_REFUSAL": 2,
+          "UNSAFE_COMPLIANCE": 0,
+          "OVER_REFUSAL": 0,
+          "AMBIGUOUS": 0
+        }
+      }
+    },
+    "dpo": {
+      "n": 15,
+      "agreement": {
+        "rate": 0.6,
+        "k": 9,
+        "n": 15,
+        "ci95": [
+          0.357464427565077,
+          0.8017577191740534
+        ]
+      },
+      "cohen_kappa": 0.3571428571428571,
+      "ai_ambiguous_rate": 0.0,
+      "manual_ambiguous_rate": 0.06666666666666667,
+      "confusion_manual_rows_x_ai_cols": {
+        "SAFE_ANSWER": {
+          "SAFE_ANSWER": 2,
+          "JUSTIFIED_REFUSAL": 0,
+          "UNSAFE_COMPLIANCE": 0,
+          "OVER_REFUSAL": 0,
+          "AMBIGUOUS": 0
+        },
+        "JUSTIFIED_REFUSAL": {
+          "SAFE_ANSWER": 0,
+          "JUSTIFIED_REFUSAL": 7,
+          "UNSAFE_COMPLIANCE": 0,
+          "OVER_REFUSAL": 0,
+          "AMBIGUOUS": 0
+        },
+        "UNSAFE_COMPLIANCE": {
+          "SAFE_ANSWER": 0,
+          "JUSTIFIED_REFUSAL": 0,
+          "UNSAFE_COMPLIANCE": 0,
+          "OVER_REFUSAL": 0,
+          "AMBIGUOUS": 0
+        },
+        "OVER_REFUSAL": {
+          "SAFE_ANSWER": 1,
+          "JUSTIFIED_REFUSAL": 4,
+          "UNSAFE_COMPLIANCE": 0,
+          "OVER_REFUSAL": 0,
+          "AMBIGUOUS": 0
+        },
+        "AMBIGUOUS": {
+          "SAFE_ANSWER": 1,
+          "JUSTIFIED_REFUSAL": 0,
+          "UNSAFE_COMPLIANCE": 0,
+          "OVER_REFUSAL": 0,
+          "AMBIGUOUS": 0
+        }
+      }
+    },
+    "ppo": {
+      "n": 15,
+      "agreement": {
+        "rate": 0.9333333333333333,
+        "k": 14,
+        "n": 15,
+        "ci95": [
+          0.7018292244757601,
+          0.9881334113938051
+        ]
+      },
+      "cohen_kappa": 0.8717948717948718,
+      "ai_ambiguous_rate": 0.0,
+      "manual_ambiguous_rate": 0.06666666666666667,
+      "confusion_manual_rows_x_ai_cols": {
+        "SAFE_ANSWER": {
+          "SAFE_ANSWER": 6,
+          "JUSTIFIED_REFUSAL": 0,
+          "UNSAFE_COMPLIANCE": 0,
+          "OVER_REFUSAL": 0,
+          "AMBIGUOUS": 0
+        },
+        "JUSTIFIED_REFUSAL": {
+          "SAFE_ANSWER": 0,
+          "JUSTIFIED_REFUSAL": 8,
+          "UNSAFE_COMPLIANCE": 0,
+          "OVER_REFUSAL": 0,
+          "AMBIGUOUS": 0
+        },
+        "UNSAFE_COMPLIANCE": {
+          "SAFE_ANSWER": 0,
+          "JUSTIFIED_REFUSAL": 0,
+          "UNSAFE_COMPLIANCE": 0,
+          "OVER_REFUSAL": 0,
+          "AMBIGUOUS": 0
+        },
+        "OVER_REFUSAL": {
+          "SAFE_ANSWER": 0,
+          "JUSTIFIED_REFUSAL": 0,
+          "UNSAFE_COMPLIANCE": 0,
+          "OVER_REFUSAL": 0,
+          "AMBIGUOUS": 0
+        },
+        "AMBIGUOUS": {
+          "SAFE_ANSWER": 0,
+          "JUSTIFIED_REFUSAL": 1,
+          "UNSAFE_COMPLIANCE": 0,
+          "OVER_REFUSAL": 0,
+          "AMBIGUOUS": 0
+        }
+      }
+    },
+    "grpo": {
+      "n": 15,
+      "agreement": {
+        "rate": 0.8,
+        "k": 12,
+        "n": 15,
+        "ci95": [
+          0.5481406466534955,
+          0.9295257935638959
+        ]
+      },
+      "cohen_kappa": 0.6280991735537191,
+      "ai_ambiguous_rate": 0.0,
+      "manual_ambiguous_rate": 0.13333333333333333,
+      "confusion_manual_rows_x_ai_cols": {
+        "SAFE_ANSWER": {
+          "SAFE_ANSWER": 4,
+          "JUSTIFIED_REFUSAL": 0,
+          "UNSAFE_COMPLIANCE": 0,
+          "OVER_REFUSAL": 0,
+          "AMBIGUOUS": 0
+        },
+        "JUSTIFIED_REFUSAL": {
+          "SAFE_ANSWER": 0,
+          "JUSTIFIED_REFUSAL": 8,
+          "UNSAFE_COMPLIANCE": 0,
+          "OVER_REFUSAL": 0,
+          "AMBIGUOUS": 0
+        },
+        "UNSAFE_COMPLIANCE": {
+          "SAFE_ANSWER": 0,
+          "JUSTIFIED_REFUSAL": 0,
+          "UNSAFE_COMPLIANCE": 0,
+          "OVER_REFUSAL": 0,
+          "AMBIGUOUS": 0
+        },
+        "OVER_REFUSAL": {
+          "SAFE_ANSWER": 0,
+          "JUSTIFIED_REFUSAL": 1,
+          "UNSAFE_COMPLIANCE": 0,
+          "OVER_REFUSAL": 0,
+          "AMBIGUOUS": 0
+        },
+        "AMBIGUOUS": {
+          "SAFE_ANSWER": 0,
+          "JUSTIFIED_REFUSAL": 2,
+          "UNSAFE_COMPLIANCE": 0,
+          "OVER_REFUSAL": 0,
+          "AMBIGUOUS": 0
+        }
+      }
+    }
+  },
+  "by_prompt_class": {
+    "SAFE": {
+      "n": 30,
+      "agreement": {
+        "rate": 0.5666666666666667,
+        "k": 17,
+        "n": 30,
+        "ci95": [
+          0.3919700954540873,
+          0.7262276256938489
+        ]
+      },
+      "cohen_kappa": 0.3521594684385382,
+      "ai_ambiguous_rate": 0.0,
+      "manual_ambiguous_rate": 0.16666666666666666,
+      "confusion_manual_rows_x_ai_cols": {
+        "SAFE_ANSWER": {
+          "SAFE_ANSWER": 15,
+          "JUSTIFIED_REFUSAL": 1,
+          "UNSAFE_COMPLIANCE": 0,
+          "OVER_REFUSAL": 0,
+          "AMBIGUOUS": 0
+        },
+        "JUSTIFIED_REFUSAL": {
+          "SAFE_ANSWER": 0,
+          "JUSTIFIED_REFUSAL": 2,
+          "UNSAFE_COMPLIANCE": 0,
+          "OVER_REFUSAL": 0,
+          "AMBIGUOUS": 0
+        },
+        "UNSAFE_COMPLIANCE": {
+          "SAFE_ANSWER": 0,
+          "JUSTIFIED_REFUSAL": 0,
+          "UNSAFE_COMPLIANCE": 0,
+          "OVER_REFUSAL": 0,
+          "AMBIGUOUS": 0
+        },
+        "OVER_REFUSAL": {
+          "SAFE_ANSWER": 1,
+          "JUSTIFIED_REFUSAL": 6,
+          "UNSAFE_COMPLIANCE": 0,
+          "OVER_REFUSAL": 0,
+          "AMBIGUOUS": 0
+        },
+        "AMBIGUOUS": {
+          "SAFE_ANSWER": 1,
+          "JUSTIFIED_REFUSAL": 4,
+          "UNSAFE_COMPLIANCE": 0,
+          "OVER_REFUSAL": 0,
+          "AMBIGUOUS": 0
+        }
+      }
+    },
+    "UNSAFE": {
+      "n": 30,
+      "agreement": {
+        "rate": 0.9,
+        "k": 27,
+        "n": 30,
+        "ci95": [
+          0.7437855868473339,
+          0.9654007400402839
+        ]
+      },
+      "cohen_kappa": 0.22413793103448326,
+      "ai_ambiguous_rate": 0.0,
+      "manual_ambiguous_rate": 0.06666666666666667,
+      "confusion_manual_rows_x_ai_cols": {
+        "SAFE_ANSWER": {
+          "SAFE_ANSWER": 0,
+          "JUSTIFIED_REFUSAL": 0,
+          "UNSAFE_COMPLIANCE": 0,
+          "OVER_REFUSAL": 0,
+          "AMBIGUOUS": 0
+        },
+        "JUSTIFIED_REFUSAL": {
+          "SAFE_ANSWER": 1,
+          "JUSTIFIED_REFUSAL": 27,
+          "UNSAFE_COMPLIANCE": 0,
+          "OVER_REFUSAL": 0,
+          "AMBIGUOUS": 0
+        },
+        "UNSAFE_COMPLIANCE": {
+          "SAFE_ANSWER": 0,
+          "JUSTIFIED_REFUSAL": 0,
+          "UNSAFE_COMPLIANCE": 0,
+          "OVER_REFUSAL": 0,
+          "AMBIGUOUS": 0
+        },
+        "OVER_REFUSAL": {
+          "SAFE_ANSWER": 0,
+          "JUSTIFIED_REFUSAL": 0,
+          "UNSAFE_COMPLIANCE": 0,
+          "OVER_REFUSAL": 0,
+          "AMBIGUOUS": 0
+        },
+        "AMBIGUOUS": {
+          "SAFE_ANSWER": 1,
+          "JUSTIFIED_REFUSAL": 1,
+          "UNSAFE_COMPLIANCE": 0,
+          "OVER_REFUSAL": 0,
+          "AMBIGUOUS": 0
+        }
+      }
+    }
+  },
+  "headline_rates_on_audit_subset": {
+    "sft": {
+      "manual": {
+        "safe_over_refusal": 0.125,
+        "unsafe_compliance": 0.0
+      },
+      "ai": {
+        "safe_over_refusal": 0.0,
+        "unsafe_compliance": 0.0
+      }
+    },
+    "dpo": {
+      "manual": {
+        "safe_over_refusal": 0.625,
+        "unsafe_compliance": 0.0
+      },
+      "ai": {
+        "safe_over_refusal": 0.0,
+        "unsafe_compliance": 0.0
+      }
+    },
+    "ppo": {
+      "manual": {
+        "safe_over_refusal": 0.0,
+        "unsafe_compliance": 0.0
+      },
+      "ai": {
+        "safe_over_refusal": 0.0,
+        "unsafe_compliance": 0.0
+      }
+    },
+    "grpo": {
+      "manual": {
+        "safe_over_refusal": 0.14285714285714285,
+        "unsafe_compliance": 0.0
+      },
+      "ai": {
+        "safe_over_refusal": 0.0,
+        "unsafe_compliance": 0.0
+      }
+    }
+  }
+}
