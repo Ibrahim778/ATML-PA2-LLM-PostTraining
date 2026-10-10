@@ -12,67 +12,67 @@
       "before_each_epoch": [
         {
           "epoch": 1,
-          "clipped_objective_loss": -0.07226124425429876,
-          "grad_norm": 0.05546734482049942,
-          "clip_fraction": 0.5466303825378418,
-          "affected_token_fraction": 0.2691173255443573,
-          "unclipped_surrogate": -0.008209764957427979,
-          "ratio_mean": 0.919123113155365,
-          "ratio_min": 1.027404133990828e-10,
-          "ratio_max": 29.81205940246582
+          "clipped_objective_loss": 0.08115165738371145,
+          "grad_norm": 0.041685834527015686,
+          "clip_fraction": 0.5452688932418823,
+          "affected_token_fraction": 0.26820966601371765,
+          "unclipped_surrogate": -0.008117028512060642,
+          "ratio_mean": 0.9190974235534668,
+          "ratio_min": 1.0204418560144646e-10,
+          "ratio_max": 29.86161231994629
         },
         {
           "epoch": 2,
-          "clipped_objective_loss": -0.07230438621613698,
-          "grad_norm": 0.05389922112226486,
-          "clip_fraction": 0.5473110675811768,
-          "affected_token_fraction": 0.2688904106616974,
-          "unclipped_surrogate": -0.008182279765605927,
-          "ratio_mean": 0.9191961288452148,
-          "ratio_min": 1.0275236911327923e-10,
-          "ratio_max": 29.870996475219727
+          "clipped_objective_loss": 0.08113986029857502,
+          "grad_norm": 0.0419294610619545,
+          "clip_fraction": 0.5466303825378418,
+          "affected_token_fraction": 0.26877695322036743,
+          "unclipped_surrogate": -0.008075105026364326,
+          "ratio_mean": 0.919125497341156,
+          "ratio_min": 1.0334200856165765e-10,
+          "ratio_max": 29.86220932006836
         }
       ],
       "after_last_step": {
-        "clip_fraction": 0.5473110675811768,
-        "affected_token_fraction": 0.2688904106616974,
-        "unclipped_surrogate": -0.008190766908228397,
-        "ratio_mean": 0.9190961122512817,
-        "ratio_min": 1.0198639155412081e-10,
-        "ratio_max": 29.81206512451172
+        "clip_fraction": 0.5456092357635498,
+        "affected_token_fraction": 0.26820966601371765,
+        "unclipped_surrogate": -0.007998674176633358,
+        "ratio_mean": 0.9190700650215149,
+        "ratio_min": 1.0063473665500311e-10,
+        "ratio_max": 29.861740112304688
       }
     },
     "0.2": {
       "before_each_epoch": [
         {
           "epoch": 1,
-          "clipped_objective_loss": -0.04792391266597461,
-          "grad_norm": 0.05832028388977051,
-          "clip_fraction": 0.3289085626602173,
-          "affected_token_fraction": 0.1616746038198471,
-          "unclipped_surrogate": -0.008209764957427979,
-          "ratio_mean": 0.919123113155365,
-          "ratio_min": 1.027404133990828e-10,
-          "ratio_max": 29.81205940246582
+          "clipped_objective_loss": 0.05858421746564475,
+          "grad_norm": 0.04505453631281853,
+          "clip_fraction": 0.3291354775428772,
+          "affected_token_fraction": 0.16156114637851715,
+          "unclipped_surrogate": -0.008117028512060642,
+          "ratio_mean": 0.9190974235534668,
+          "ratio_min": 1.0204418560144646e-10,
+          "ratio_max": 29.86161231994629
         },
         {
           "epoch": 2,
-          "clipped_objective_loss": -0.04797989087370185,
-          "grad_norm": 0.06555663794279099,
-          "clip_fraction": 0.32902202010154724,
-          "affected_token_fraction": 0.16122078895568848,
-          "unclipped_surrogate": -0.008208286948502064,
-          "ratio_mean": 0.919207751750946,
-          "ratio_min": 1.0236349268222256e-10,
-          "ratio_max": 29.812570571899414
+          "clipped_objective_loss": 0.05855410545472658,
+          "grad_norm": 0.04464086890220642,
+          "clip_fraction": 0.3283412754535675,
+          "affected_token_fraction": 0.1614477038383484,
+          "unclipped_surrogate": -0.008072948083281517,
+          "ratio_mean": 0.9190720915794373,
+          "ratio_min": 1.0209655343373925e-10,
+          "ratio_max": 29.812599182128906
         }
       ],
       "after_last_step": {
-        "clip_fraction": 0.32902202010154724,
-        "affected_token_fraction": 0.16122078895568848,
-        "unclipped_surrogate": -0.008203679695725441,
-        "ratio_mean": 0.9191746711730957,
-        "ratio_min": 1.0224036894879163e-10,
+        "clip_fraction": 0.3275470733642578,
+        "affected_token_fraction": 0.1606535017490387,
+        "unclipped_surrogate": -0.008034346625208855,
+        "ratio_mean": 0.9191887974739075,
+        "ratio_min": 1.0061899924362905e-10,
         "ratio_max": 29.81255531311035
       }
     },
@@ -80,34 +80,34 @@
       "before_each_epoch": [
         {
           "epoch": 1,
-          "clipped_objective_loss": -0.021096839713212086,
-          "grad_norm": 0.061941958963871,
-          "clip_fraction": 0.16859541833400726,
-          "affected_token_fraction": 0.08259586989879608,
-          "unclipped_surrogate": -0.008209764957427979,
-          "ratio_mean": 0.919123113155365,
-          "ratio_min": 1.027404133990828e-10,
-          "ratio_max": 29.81205940246582
+          "clipped_objective_loss": 0.03360601457125373,
+          "grad_norm": 0.0476565808057785,
+          "clip_fraction": 0.16916269063949585,
+          "affected_token_fraction": 0.08293623477220535,
+          "unclipped_surrogate": -0.008117028512060642,
+          "ratio_mean": 0.9190974235534668,
+          "ratio_min": 1.0204418560144646e-10,
+          "ratio_max": 29.86161231994629
         },
         {
           "epoch": 2,
-          "clipped_objective_loss": -0.021074370566661702,
-          "grad_norm": 0.06304017454385757,
-          "clip_fraction": 0.16882233321666718,
-          "affected_token_fraction": 0.082822784781456,
-          "unclipped_surrogate": -0.008231080137193203,
-          "ratio_mean": 0.9190948605537415,
-          "ratio_min": 9.97075200181996e-11,
-          "ratio_max": 29.8032169342041
+          "clipped_objective_loss": 0.03354437005143055,
+          "grad_norm": 0.04780270904302597,
+          "clip_fraction": 0.1690492331981659,
+          "affected_token_fraction": 0.08293623477220535,
+          "unclipped_surrogate": -0.008054770529270172,
+          "ratio_mean": 0.9191207885742188,
+          "ratio_min": 1.0179321968672994e-10,
+          "ratio_max": 29.812570571899414
         }
       ],
       "after_last_step": {
-        "clip_fraction": 0.16893579065799713,
-        "affected_token_fraction": 0.08293623477220535,
-        "unclipped_surrogate": -0.008168372325599194,
-        "ratio_mean": 0.9192035794258118,
-        "ratio_min": 1.0130222355408947e-10,
-        "ratio_max": 29.812591552734375
+        "clip_fraction": 0.16859541833400726,
+        "affected_token_fraction": 0.08248241245746613,
+        "unclipped_surrogate": -0.008116998709738255,
+        "ratio_mean": 0.9191291332244873,
+        "ratio_min": 1.0294029517687875e-10,
+        "ratio_max": 29.871501922607422
       }
     }
   }

@@ -186,7 +186,8 @@ def cached_batch_study(config_path, cfg, eps_values):
     batch = build_cached_batch(rows, cfg, tok)
     if batch["length_mismatches"]:
         print(f"WARNING: {len(batch['length_mismatches'])} rows had response/log-prob length mismatches (truncated to the shorter).")
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    device = torch.device("cuda" if torch.cuda.is_available()
+                          else "mps" if torch.backends.mps.is_available() else "cpu")
     adv, ret, source = cached_advantages(batch, rows, cfg, tok, device)
     mask, old = batch["response_mask"], batch["old_logp"]
     total_tok = float(mask.sum())
@@ -195,6 +196,7 @@ def cached_batch_study(config_path, cfg, eps_values):
         """Per-token new log-probs for the whole batch (micro-batched); optionally backprop the PPO loss."""
         new = torch.zeros_like(mask)
         loss_total = 0.0
+        device = next(policy.parameters()).device
         for s in range(0, len(rows), MICRO_BATCH):
             args, sl = _micro(batch, s, device)
             with torch.set_grad_enabled(grad):
@@ -204,7 +206,7 @@ def cached_batch_study(config_path, cfg, eps_values):
                     loss, _, _ = ppo_policy_loss(nl, old[sl].to(device), adv[sl].to(device), m, eps=eps)
                     w = float(m.sum()) / total_tok           # token-weighted == one masked mean over the batch
                     (loss * w).backward()
-                    loss_total += float(loss) * w
+                    loss_total += float(loss.detach()) * w
             new[sl] = nl.detach().float().cpu()
         return torch.exp(new - old) * mask + (1 - mask), loss_total
 

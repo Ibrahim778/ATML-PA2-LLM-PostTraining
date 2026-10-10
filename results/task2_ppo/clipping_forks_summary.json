@@ -8,15 +8,15 @@
       "wall_clock_s": 30.75629197061062,
       "peak_vram_gb": 6.71718692779541,
       "heldout": {
-        "rm_score_mean": 1.5662527656555176,
-        "rm_score_std": 1.4556415847225916,
-        "task_reward_mean": 1.4812527656555177,
-        "kl_per_token": -9.655834358347566e-06,
-        "entropy_per_token": 0.9897975916465023,
-        "length_mean": 284.075,
-        "length_std": 251.50641494561123,
-        "eos_rate": 0.915,
-        "truncation_rate": 0.085
+        "rm_score_mean": 1.6312506866455079,
+        "rm_score_std": 1.3383805851248385,
+        "task_reward_mean": 1.556250686645508,
+        "kl_per_token": -3.601128315386691e-05,
+        "entropy_per_token": 0.9964833488833638,
+        "length_mean": 285.535,
+        "length_std": 248.855791170298,
+        "eos_rate": 0.925,
+        "truncation_rate": 0.075
       },
       "stability": {
         "reward_std_over_updates": 0.9662950763047448,
@@ -136,15 +136,15 @@
       "wall_clock_s": 31.151618575677276,
       "peak_vram_gb": 6.717191696166992,
       "heldout": {
-        "rm_score_mean": 1.6509370613098144,
-        "rm_score_std": 1.4286780874262988,
-        "task_reward_mean": 1.5859370613098145,
-        "kl_per_token": -3.251419051147858e-06,
-        "entropy_per_token": 0.9822426084207103,
-        "length_mean": 285.37,
-        "length_std": 244.8173416115959,
-        "eos_rate": 0.935,
-        "truncation_rate": 0.065
+        "rm_score_mean": 1.5781305313110352,
+        "rm_score_std": 1.350437884693991,
+        "task_reward_mean": 1.4931305313110352,
+        "kl_per_token": 1.1112462543211638e-05,
+        "entropy_per_token": 0.9870671991592403,
+        "length_mean": 283.52,
+        "length_std": 245.63600066790008,
+        "eos_rate": 0.915,
+        "truncation_rate": 0.085
       },
       "stability": {
         "reward_std_over_updates": 1.1298446220201501,
@@ -264,15 +264,15 @@
       "wall_clock_s": 27.207502337172627,
       "peak_vram_gb": 6.670546531677246,
       "heldout": {
-        "rm_score_mean": 1.671881103515625,
-        "rm_score_std": 1.3185005394697922,
-        "task_reward_mean": 1.611881103515625,
-        "kl_per_token": -3.4365579236306726e-05,
-        "entropy_per_token": 1.0196687983945765,
-        "length_mean": 284.11,
-        "length_std": 239.27954657060678,
-        "eos_rate": 0.94,
-        "truncation_rate": 0.06
+        "rm_score_mean": 1.6376140594482422,
+        "rm_score_std": 1.3294222687115593,
+        "task_reward_mean": 1.5626140594482423,
+        "kl_per_token": -9.728454600015437e-06,
+        "entropy_per_token": 0.9811370469722859,
+        "length_mean": 279.515,
+        "length_std": 244.0606024398788,
+        "eos_rate": 0.925,
+        "truncation_rate": 0.075
       },
       "stability": {
         "reward_std_over_updates": 0.7195345819797587,
