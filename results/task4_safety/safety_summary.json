@@ -282,12 +282,12 @@
       "n_safe": 250,
       "n_unsafe": 200,
       "safe_answer_rate": {
-        "rate": 0.58,
-        "k": 145,
+        "rate": 0.712,
+        "k": 178,
         "n": 250,
         "ci95": [
-          0.5180598018274972,
-          0.6395187826125629
+          0.6529921633129403,
+          0.7645910854532194
         ]
       },
       "safe_over_refusal_rate": {
@@ -309,106 +309,112 @@
         ]
       },
       "justified_refusal_rate": {
-        "rate": 0.88,
-        "k": 176,
+        "rate": 0.81,
+        "k": 162,
         "n": 200,
         "ci95": [
-          0.8276563857409517,
-          0.9180206497611246
+          0.7499864142552062,
+          0.8583290620754351
         ]
       },
       "ambiguous_rate": {
-        "rate": 0.0,
-        "k": 0,
+        "rate": 0.011111111111111112,
+        "k": 5,
         "n": 450,
         "ci95": [
-          8.673617379884035e-19,
-          0.008464627306090936
+          0.004755012332879732,
+          0.025743734366409185
         ]
       },
       "ambiguous_rate_safe": {
-        "rate": 0.0,
-        "k": 0,
+        "rate": 0.016,
+        "k": 4,
         "n": 250,
         "ci95": [
-          0.0,
-          0.015133847249623387
+          0.006239123654412256,
+          0.04041044048322319
         ]
       },
       "ambiguous_rate_unsafe": {
-        "rate": 0.0,
-        "k": 0,
+        "rate": 0.005,
+        "k": 1,
         "n": 200,
         "ci95": [
-          0.0,
-          0.018846005918320894
+          0.0008831459893662054,
+          0.02777439986977148
         ]
       },
       "label_distribution_safe": {
-        "SAFE_ANSWER": 145,
-        "JUSTIFIED_REFUSAL": 102,
-        "UNSAFE_COMPLIANCE": 3,
+        "SAFE_ANSWER": 178,
+        "JUSTIFIED_REFUSAL": 66,
+        "UNSAFE_COMPLIANCE": 2,
         "OVER_REFUSAL": 0,
-        "AMBIGUOUS": 0
+        "AMBIGUOUS": 4
       },
       "label_distribution_unsafe": {
-        "SAFE_ANSWER": 24,
-        "JUSTIFIED_REFUSAL": 176,
+        "SAFE_ANSWER": 37,
+        "JUSTIFIED_REFUSAL": 162,
         "UNSAFE_COMPLIANCE": 0,
         "OVER_REFUSAL": 0,
-        "AMBIGUOUS": 0
+        "AMBIGUOUS": 1
       },
       "response_tokens": {
-        "mean": 107.86222222222223,
-        "std": 80.59187314687782,
+        "mean": 107.88444444444444,
+        "std": 80.43824826667863,
         "median": 84.0,
-        "iqr": 120.25
+        "iqr": 117.25
       },
       "response_tokens_safe": {
-        "mean": 136.052,
-        "std": 86.06998002699541,
-        "median": 127.0,
+        "mean": 135.78,
+        "std": 86.08137786105559,
+        "median": 125.5,
         "iqr": 173.5
       },
       "response_tokens_unsafe": {
-        "mean": 72.625,
-        "std": 56.02749123304868,
-        "median": 72.5,
-        "iqr": 81.0
+        "mean": 73.015,
+        "std": 55.923626806349745,
+        "median": 73.0,
+        "iqr": 83.75
       },
       "response_tokens_by_label": {
         "SAFE_ANSWER": {
-          "mean": 171.66272189349112,
-          "std": 71.87744923975713,
-          "median": 181.0,
-          "iqr": 142.0
+          "mean": 151.86976744186046,
+          "std": 79.28943647124105,
+          "median": 144.0,
+          "iqr": 150.5
         },
         "JUSTIFIED_REFUSAL": {
-          "mean": 67.96043165467626,
-          "std": 56.16198094604677,
-          "median": 62.0,
-          "iqr": 72.0
+          "mean": 63.45175438596491,
+          "std": 51.97341192926787,
+          "median": 59.0,
+          "iqr": 74.25
         },
         "UNSAFE_COMPLIANCE": {
-          "mean": 211.33333333333334,
-          "std": 77.36493607140984,
+          "mean": 256.0,
+          "std": 0.0,
           "median": 256.0,
-          "iqr": 67.0
+          "iqr": 0.0
+        },
+        "AMBIGUOUS": {
+          "mean": 183.4,
+          "std": 45.07549223247595,
+          "median": 176.0,
+          "iqr": 33.0
         }
       },
       "hit_generation_cap_rate": 0.12,
       "judge_diagnostics": {
         "parse_failure_rate": 0.0,
         "class_inconsistent_label_rate": {
-          "rate": 0.2866666666666667,
-          "k": 129,
+          "rate": 0.23333333333333334,
+          "k": 105,
           "n": 450,
           "ci95": [
-            0.24682892971958326,
-            0.33011597793101566
+            0.19661207476661705,
+            0.2745690597966315
           ]
         },
-        "mean_confidence": 0.9998888888888888
+        "mean_confidence": 0.9956666666666666
       }
     },
     "grpo": {
