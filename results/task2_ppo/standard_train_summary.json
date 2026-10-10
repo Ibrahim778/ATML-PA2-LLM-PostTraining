@@ -8,10 +8,10 @@
   "kl_beta": 0.1,
   "policy_learning_rate": 3e-06,
   "seed": 6304,
-  "generated_tokens_total": 6965,
-  "wall_clock_s": 80.14945161901414,
-  "peak_vram_gb": 6.716830730438232,
-  "adapter_path": "/home/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/standard",
-  "value_path": "/home/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/standard_value",
-  "train_log": "/home/ATML-PA2-LLM-PostTraining/results/task2_ppo/standard_train_log.jsonl"
+  "generated_tokens_total": 6358,
+  "wall_clock_s": 465.10861062497133,
+  "peak_vram_gb": null,
+  "adapter_path": "/Users/ibrahim/Repos/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/standard",
+  "value_path": "/Users/ibrahim/Repos/ATML-PA2-LLM-PostTraining/outputs/task2_ppo/standard_value",
+  "train_log": "/Users/ibrahim/Repos/ATML-PA2-LLM-PostTraining/results/task2_ppo/standard_train_log.jsonl"
 }
